@@ -1,0 +1,222 @@
+NLP RECORD – THEORY
+
+INTRODUCTION TO PYTHON FOR NLP
+
+Python is the most popular programming language for Natural Language Processing (NLP) because it is simple, easy to learn and has many NLP libraries. Some of the most widely used libraries are NLTK (Natural Language Toolkit).
+
+NLTK is an open-source Python library that provides tools and databases for working with human language. It helps perform tasks such as tokenization, stop word removal, stemming, lemmatization, part-of-speech tagging, text classification, and named entity recognition.
+
+Uses of Python for NLP:
+• Simple and easy-to-read syntax
+• Free and Open Source
+• Large collection of NLP libraries
+• Extensive community support
+• Easy integration with machine learning and AI techniques
+
+Procedure to install NLTK:
+• Install Python and open pip
+  pip install nltk
+
+• Importing NLTK
+  import nltk
+
+• Downloading NLTK data
+  import nltk
+  nltk.download('punkt')
+  nltk.download('stopwords')
+  nltk.download('wordnet')
+  nltk.download('averaged_perceptron_tagger')
+
+Applications of NLTK:
+• Text processing
+• Tokenization
+• Stop word removal
+• Stemming and lemmatization
+
+Advantages of NLTK:
+• Easy to learn and use
+• Rich collection of NLP tools
+• Free and open source
+• Suitable for education, research and prototyping.
+
+Conclusion:
+Python, together with the NLTK library, provides a powerful and beginner-friendly environment for NLP.
+
+EXP-2 — TOKENIZATION
+
+AIM:
+To perform tokenization on a given text using Python and the NLTK library by splitting the text into words or sentences.
+
+ALGORITHM:
+1. Start the program.
+2. Import the NLTK library.
+3. Import the required tokenizer (word_tokenize & sent_tokenize).
+4. Enter or define the input text.
+5. Tokenize the text into words or sentences.
+6. Display the generated tokens.
+7. Stop the program.
+
+OUTPUT:
+['Every small step you take today brings you closer to your goals.']
+['Every', 'small', 'step', 'you', 'take', 'today', 'brings', 'you', 'closer', 'to', 'your', 'goals']
+
+RESULT:
+The given sentence was successfully tokenized into sentence and word using NLTK.
+
+EXP-3 — STOPWORDS
+
+AIM:
+To remove stop words from a given sentence using the NLTK library in Python.
+
+ALGORITHM:
+1. Start the program.
+2. Import stop words from nltk.corpus.
+3. Import tokenizer from nltk.tokenize.
+4. Define the input sentence.
+5. Tokenize the sentence into words.
+6. Load the English stop words.
+7. Remove the English stop words.
+8. Display the remaining non-stop words.
+9. Stop the program.
+
+OUTPUT:
+['hold', 'breath', 'till', 'touch', 'one', 'two', 'sort']
+
+RESULT:
+The stop words were successfully removed from the given sentence using NLTK.
+
+EXP-4 — STEMMING WITH PORTER STEMMER
+
+AIM:
+To tokenize a sentence into word and perform stemming using the porter stemmer in NLTK.
+
+ALGORITHM:
+1. Import the required NLTK modules.
+2. Create a PorterStemmer object.
+3. Tokenize the input sentence into words.
+4. Apply the stem() method to each word.
+5. Display the stemmed words.
+
+OUTPUT:
+i
+t
+i
+s
+v
+e
+r
+y
+i
+m
+p
+o
+r
+t
+a
+n
+t
+...
+
+RESULT:
+The given sentence was successfully tokenized and stemmed, and each word got its root form.
+
+EXP-5 — STEMMING IN NLTK USING PORTER STEMMER
+
+AIM:
+To perform stemming on a set of words using the Porter stemmer in Python's NLTK library.
+
+ALGORITHM:
+1. Import the Porter Stemmer class from the nltk.stem module.
+2. Create an object of the Porter Stemmer class.
+3. Define a list of words to be stemmed.
+4. Use a for loop to process each word.
+5. Apply the stem() method to each word.
+6. Display the stemmed words.
+
+OUTPUT:
+implement
+implement
+implement
+implement
+
+RESULT:
+Thus the given words were successfully executed with stemming.
+
+EXP-6 — LEMMATIZATION IN NLTK USING WORDNET LEMMATIZER
+
+AIM:
+To perform lemmatization on words using wordnet lemmatizer in Python's NLTK library.
+
+ALGORITHM:
+1. Import the WordNetLemmatizer class from the NLTK library.
+2. Create a WordNetLemmatizer object.
+3. Apply the lemmatize() method to given words.
+4. Specify the POS tag of each word (e.g. "a") as adjective.
+5. Display the lemmatized word.
+
+OUTPUT:
+good
+happy
+
+RESULT:
+Thus lemmatization in NLP using word net lemmatization is successfully executed.
+
+EXP-7 — PART OF SPEECH IN NLTK
+
+AIM:
+To identify the POS of each word in sentence using the NLTK for tagger.
+
+ALGORITHM:
+1. Import required libraries.
+2. Download necessary NLTK libraries.
+3. Read sentence from user.
+4. Tokenize the sentence into words.
+5. Apply POS tagging and display each word with its POS tag.
+
+OUTPUT:
+Enter a sentence: Small steps every day lead to big achievements
+
+WORD        POS TAG        FULL FORM
+Small       JJ             Adjective
+steps       NNS            Plural noun
+every       DT             Determiner
+day         NN             Noun
+lead        VBP            Verb (Present)
+to          TO             To
+big         JJ             Adjective
+achievements NNS           Plural noun
+
+RESULT:
+The given words were successfully recognized with POS in NLTK.
+
+EXP-8 — ENTITY / NAMED ENTITY RECOGNITION
+
+AIM:
+To identify named entities such as person, organization, location and date from a given sentence using spaCy.
+
+ALGORITHM:
+1. Import the spaCy library.
+2. Load the English language model.
+3. Read a sentence from the user.
+4. Process the sentence and identify named entities.
+5. Display the entity text and its label.
+
+OUTPUT:
+Enter a sentence: Microsoft announced a new AI product in New York on Monday.
+
+Named entities
+
+Entity : Microsoft
+Label  : ORG
+
+Entity : AI
+Label  : ORG
+
+Entity : New York
+Label  : GPE
+
+Entity : Monday
+Label  : DATE
+
+RESULT:
+The program successfully identified and displayed the named entities in the input sentence using spaCy.
