@@ -42,6 +42,7 @@ Advantages of NLTK:
 Conclusion:
 Python, together with the NLTK library, provides a powerful and beginner-friendly environment for NLP.
 
+
 EXP-2 — TOKENIZATION
 
 AIM:
@@ -62,6 +63,7 @@ OUTPUT:
 
 RESULT:
 The given sentence was successfully tokenized into sentence and word using NLTK.
+
 
 EXP-3 — STOPWORDS
 
@@ -84,6 +86,7 @@ OUTPUT:
 
 RESULT:
 The stop words were successfully removed from the given sentence using NLTK.
+
 
 EXP-4 — STEMMING WITH PORTER STEMMER
 
@@ -120,6 +123,7 @@ t
 RESULT:
 The given sentence was successfully tokenized and stemmed, and each word got its root form.
 
+
 EXP-5 — STEMMING IN NLTK USING PORTER STEMMER
 
 AIM:
@@ -142,6 +146,7 @@ implement
 RESULT:
 Thus the given words were successfully executed with stemming.
 
+
 EXP-6 — LEMMATIZATION IN NLTK USING WORDNET LEMMATIZER
 
 AIM:
@@ -160,6 +165,7 @@ happy
 
 RESULT:
 Thus lemmatization in NLP using word net lemmatization is successfully executed.
+
 
 EXP-7 — PART OF SPEECH IN NLTK
 
@@ -188,6 +194,7 @@ achievements NNS           Plural noun
 
 RESULT:
 The given words were successfully recognized with POS in NLTK.
+
 
 EXP-8 — ENTITY / NAMED ENTITY RECOGNITION
 
