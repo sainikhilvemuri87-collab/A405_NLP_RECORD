@@ -1,18 +1,43 @@
 import nltk
-from nltk.tokenize import word_tokenize
-from nltk import pos_tag
+from nltk.tag import hmm
 
-nltk.download('punkt')
-nltk.download('averaged_perceptron_tagger')
+training_data = [
+    [
+        ("The", "DET"),
+        ("customer", "NOUN"),
+        ("needs", "VERB"),
+        ("help", "NOUN")
+    ],
+    [
+        ("The", "DET"),
+        ("user", "NOUN"),
+        ("reports", "VERB"),
+        ("problem", "NOUN")
+    ],
+    [
+        ("A", "DET"),
+        ("customer", "NOUN"),
+        ("requests", "VERB"),
+        ("support", "NOUN")
+    ],
+    [
+        ("The", "DET"),
+        ("agent", "NOUN"),
+        ("provides", "VERB"),
+        ("assistance", "NOUN")
+    ]
+]
 
-text = input("Enter a sentence: ")
+trainer = hmm.HiddenMarkovModelTrainer()
+tagger = trainer.train_supervised(training_data)
 
-tokens = word_tokenize(text)
+sentence = input("Enter a customer message: ")
 
-tags = pos_tag(tokens)
+words = nltk.word_tokenize(sentence)
+tagged_words = tagger.tag(words)
 
-print("\nPart-of-Speech Tags")
-print("-" * 35)
+print("\nWord\tPOS Tag")
+print("--------------------")
 
-for word, tag in tags:
-    print(f"{word:<15} {tag}")
+for word, tag in tagged_words:
+    print(f"{word}\t{tag}")
